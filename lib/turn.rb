@@ -40,7 +40,7 @@ def turn(board)
   puts "Please enter 1-9:"
   users_input = gets.chomp
   index = input_to_index(users_input)
-  if valid_move? == true
+  if valid_move?(board, index) == true
     move(board, index)
     display_board(board)
   else
