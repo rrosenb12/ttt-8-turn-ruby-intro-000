@@ -26,7 +26,7 @@ def valid_move?(board, index)
       return false
     end
   end
-  if (position_taken?(board, index)) == false && (on_board?(index) == true)
+  if (position_taken?(board, index)) == false && (on_board?(index)) == true
     return true
   else
     return false
@@ -38,8 +38,8 @@ def move(board, index, user_marker="X")
 end
 def turn(board)
   puts "Please enter 1-9:"
-  num = gets.chomp
-  index = input_to_index(num)
+  users_input = gets.chomp
+  index = input_to_index(users_input)
   if valid_move? == true
     move(board, index)
     display_board(board)
